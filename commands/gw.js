@@ -17,7 +17,7 @@ module.exports = [{
  $setMessageVar[date;$dateStamp;$get[id]]
  $setMessageVar[prize;$messageSlice[2];$get[id]]
  $let[sc;$splitText[1]$textSplit[$math[$get[p]/1000];.]]
- $let[id;$sendMessage[GIVEAWAY STARTED!  {reactions:🎉} {newEmbed:{title:$messageSlice[2]} {description:**Ends in:** $splitText[1]
+ $let[id;$sendMessage[GIVEAWAY STARTED!  {reactions:🎉} {newEmbed:{title:$messageSlice[2]} {description:**Ends in:** <t:$splitText[1]$textSplit[$math[($datestamp+$parseTime[$message[1]])/1000];.]:R>
  **Host:** <@!$authorID>
  **Winner:** $message[2]} {color:#ffd2cd}};yes]]
  $onlyIf[$messageSlice[2]!=;:x: - Please enter a prize.]
